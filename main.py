@@ -701,6 +701,8 @@ if isMerge:
     p.create_index('idx_taxonid', table_name, 'taxonid')
     p.create_index('idx_parents', table_name, 'parents')
     p.create_index('idx_taxonrank', table_name, 'taxonrank')
+    p.create_index('idx_source_id', table_name, 'source_id')
+    p.create_index('idx_kingdom', table_name, 'kingdom')
     
     p.execute_bulk_statements("""
         INSERT INTO public.source_ranking (id, name, for_zoology, for_botany, for_mycology, general) VALUES
